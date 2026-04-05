@@ -45,8 +45,9 @@ students and teachers of physical education relaunched their protest against the
 
 ____
 
-### Issues
+## Issues
 
+### Numerals
 Numerals beyond 0–9 don't work out of the box (I hardcoded 79 and 1989). The grammar has the function `StrCard : String -> Card` which takes a string literal into a cardinal number. That function is disabled in the labels (if you enable it, you will get "ERROR: no constructor tree from <whatever word>"). Only use it for linearization.
 
 For now I recommend postprocessing before linearization. Later you can have your own fork of gf-ud that does this when processing.
@@ -56,3 +57,15 @@ Postprocessing means e.g.
 ```
 $ cat example.conllu | gf-ud ud2gf UDApp Eng UDS at no-backups | sed -E "s/\'([0-9]+)_Card\'/(StrCard \"\1\")/g"
 ```
+
+### Priority order of functions
+
+To get the example "students and teachers of physical education" work correctly, I wanted to prioritize conjunction between single nouns, not longer phrases. The latter results in wrong scope ("students of physical education and teachers").
+
+To do this, I have temporarily commented out the constructors for CN and NP conjunctions. This is a bad solution, because all I want is to prioritize N over CN and NP when the option exists, not disable CN and NP in all contexts.
+
+TODO: does ud2gf have any mechanism to do this? (Does anyone have the time to add it if not?)
+
+### The rest of the mess in UDAppEng.labels
+
+There is a bunch of code I wrote in 2022 and don't remember what it does. Some may have worked in an earlier version of ud2gf. I need to read through it and remove dead code / fix anything that says FIXME.
