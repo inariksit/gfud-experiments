@@ -1,4 +1,10 @@
-The following will give you the GF AST (`at`) and create a PDF with visualized trees (`vat`) (see [result](./_gfud_ast_tmp.pdf)):
+First compile the grammar into PGF:
+
+```
+$ gf -make UDAppEng.gf
+```
+
+Then call ud2gf. The following prints out the GF AST (`at`) and creates a PDF with visualized trees (`vat`) (see [result](./_gfud_ast_tmp.pdf)):
 
 ```
 $ cat example.conllu | gf-ud ud2gf UDApp Eng UDS no-backups at vat
