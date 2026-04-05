@@ -131,11 +131,13 @@ abstract BareRG =
     IndefPN : PN -> NP ;
 
   cat
+    [N]{2} ;
     [Prep]{2} ;
     [VP]{2} ;
     [VPS]{2} ;
 
   fun
+    ConjN : Conj -> [N] -> N ;
     ConjPrep : Conj -> [Prep] -> Prep ;
     ConjVP : Conj -> [VP] -> VP ;
     -- ConjVPS : Conj -> [VPS] -> VPS ;

@@ -450,6 +450,20 @@ ExtAdvS sent adv = {s = sent.s ++ "," ++ adv.s} ;
 #auxfun AdvCompleteList_ catHorse capybara and_dog : PrefixAdv -> AdvComma -> Pair_Conj_Adv -> Adv = UsePair_ (AdvCompleteList_helper_ catHorse capybara) and_dog ; head conj conj
 #auxfun AdvCompleteList_helper_ catHorse capybara and dog : PrefixAdv -> AdvComma -> Conj -> Adv -> Adv = ConjAdv and (catHorse (BaseAdv capybara dog)) ; head dummy dummy dummy
 
+-- ** N **
+#auxfun CommaN_ n comma : N -> Conj -> NComma = n ; head punct[LEMMA=\,]
+
+#auxfun AndNPair_ and dog : Conj -> N -> Pair_Conj_N = MkPair_ and dog ; cc head
+
+#auxfun N2_ cat andDog : N -> Pair_Conj_N -> N = UsePair_ (N2_helper_ cat) andDog ; head conj
+#auxfun N2_helper_ cat and dog :  N -> Conj -> N -> N = ConjN and (BaseN cat dog) ; head dummy nonexistent
+#auxfun NListHead_ cat : N -> PrefixN = ConsN cat ; head
+
+#auxfun NAddComma_ cat horse : PrefixN -> NComma -> PrefixN = Compose_ cat (ConsN horse) ; head conj
+
+#auxfun NCompleteList_ catHorse capybara and_dog : PrefixN -> NComma -> Pair_Conj_N -> N = UsePair_ (NCompleteList_helper_ catHorse capybara) and_dog ; head conj conj
+#auxfun NCompleteList_helper_ catHorse capybara and dog : PrefixN -> NComma -> Conj -> N -> N = ConjN and (catHorse (BaseN capybara dog)) ; head dummy dummy dummy
+
 -- ** CN **
 #auxfun CommaCN_ cn comma : CN -> Conj -> CNComma = cn ; head punct[LEMMA=\,]
 

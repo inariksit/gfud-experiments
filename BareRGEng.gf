@@ -206,6 +206,7 @@ concrete BareRGEng of BareRG =
     IndefPN pn = N.PredetNP (lin Predet {s= "a"}) (N.UsePN pn) ;
 
   lincat
+    [N] = ListCN ;
     [Prep] = Co.ListX ;
 
     -- This relies on the fact that auxiliaries are a separate category in UD
@@ -239,6 +240,9 @@ concrete BareRGEng of BareRG =
 
 
   lin
+    BaseN = BaseCN ;
+    ConsN = ConsCN ;
+    ConjN = ConjCN ;
     BasePrep = Co.twoSS ;
     ConsPrep = Co.consrSS Co.comma ;
     ConjPrep co pps = Co.conjunctDistrSS co pps ** {isPre = True} ;

@@ -115,6 +115,7 @@
 #fun AdvCN 	head nmod
 #fun ComplN2 	head nmod
 #fun ConjCN 	cc head
+#fun ConjN 	cc head
 #fun PossNP 	head nmod
 #fun RelCN 	head acl
 #fun SentCN 	head acl
