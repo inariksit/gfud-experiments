@@ -69,6 +69,8 @@ abstract UDCat = BareRG ** {
 
     cat Gen ; -- workaround to replace auxcats
     fun '\'s_Gen' : Gen ;
+    cat Punct ;
+    fun '-_Punct' : Punct ;
     cat Neg ;
     fun not_Neg : Neg ;
 	cat X ; -- later: replace the Xs with actual cats

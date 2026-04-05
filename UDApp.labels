@@ -55,7 +55,7 @@
 #fun PossPron head
 #fun UseN head
 #fun AdjCN amod head
-
+#fun AttributeNum nummod head -- Numeral -> N -> AP
 #fun UseV head
 
 #fun UseAdv head
@@ -176,7 +176,9 @@
 #cat auxPass AUX
 #cat expl PRON
 #cat mark PART
+#cat Gen PART -- for 's
 #cat Neg PART -- for negation particle "not"
+#cat Punct PUNCT
 #cat A ADJ primary
 #cat ACard ADV
 #cat AP ADJ

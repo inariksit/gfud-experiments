@@ -69,7 +69,7 @@ concrete UDCatEng of UDCat = BareRGEng **
     -- However, we don't ignore aux, because aux has lot of interesting information.
     be_cop = ss "be" ;
     is_cop = ss "is" ;
-    '\'s_Gen' = ss ("'s"|"’s") ;
+    '-_Punct' = ss ("-"|"–"|"—") ;
     not_Neg = ss "not" ;
 
     csubj_ uds = lin SC (uds2s uds) ;

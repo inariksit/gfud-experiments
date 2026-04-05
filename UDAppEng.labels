@@ -34,6 +34,12 @@
 -- #auxfun PossGenmodSgNP_ np cn : NP -> CN -> NP = GenModNP NumSg np cn ; nmod:poss head[Number=Sing]
 -- #auxfun PossGenmodSgPl_ np cn : NP -> CN -> NP = GenModNP NumPl np cn ; nmod:poss head[Number=Plur]
 
+-- 7-day event
+#auxfun Num_attr_ seven punct : Card -> Punct -> Attr = seven ; head[NumType=Card] punct
+#auxfun AttributeNum_ seven day : Attr -> N -> AP = AttributeNum seven day ; nummod head
+#auxfun AdjCN_num_ seven_day event : AP -> CN -> CN = AdjCN seven_day event ; compound head
+#disable AttributeNum
+
 -- disable plurals as mass terms
 #auxfun MassNP_sg cn : CN -> NP = MassNP        cn ; head[Number=Sing]
 #auxfun DetCN_aPl cn : CN -> NP = DetCN aPl_Det cn ; head[Number=Plur]
