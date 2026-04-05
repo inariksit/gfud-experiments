@@ -3,5 +3,6 @@ abstract CustomLex = Cat ** {
     Tiananmen_PN : PN ;
     China_PN : PN ; 
     Communist_A : A ;
+    relaunch_V : V ;
     
 }

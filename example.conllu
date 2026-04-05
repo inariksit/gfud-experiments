@@ -1,0 +1,68 @@
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = english-ewt-ud-2.17-251125
+# udpipe_model_licence = CC BY-NC-SA
+# newdoc
+# newpar
+# sent_id = 1
+# text = The action helped launch a 79-day street occupation that was described as the greatest challenge to China ’ s Communist rulers since the 1989 Tiananmen protests .
+1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	_
+2	action	action	NOUN	NN	Number=Sing	3	nsubj	_	_
+3	helped	help	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+4	launch	launch	VERB	VB	VerbForm=Inf	3	xcomp	_	_
+5	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	_	_
+6	79	79	NUM	CD	NumForm=Digit|NumType=Card	8	nummod	_	SpaceAfter=No
+7	-	-	PUNCT	HYPH	_	6	punct	_	SpaceAfter=No
+8	day	day	NOUN	NN	Number=Sing	10	compound	_	_
+9	street	street	NOUN	NN	Number=Sing	10	compound	_	_
+10	occupation	occupation	NOUN	NN	Number=Sing	4	obj	_	_
+11	that	that	PRON	WDT	PronType=Rel	13	nsubj:pass	_	_
+12	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	aux:pass	_	_
+13	described	describe	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	10	acl:relcl	_	_
+14	as	as	ADP	IN	_	17	case	_	_
+15	the	the	DET	DT	Definite=Def|PronType=Art	17	det	_	_
+16	greatest	great	ADJ	JJS	Degree=Sup	17	amod	_	_
+17	challenge	challenge	NOUN	NN	Number=Sing	13	obl	_	_
+18	to	to	ADP	IN	_	23	case	_	_
+19	China	China	PROPN	NNP	Number=Sing	23	nmod:poss	_	_
+20	’	's	PART	POS	_	19	case	_	_
+21	’s	's	PART	POS	Typo=Yes	19	case	_	_
+22	Communist	Communist	ADJ	JJ	Degree=Pos	23	amod	_	_
+23	rulers	ruler	NOUN	NNS	Number=Plur	17	nmod	_	_
+24	since	since	ADP	IN	_	28	case	_	_
+25	the	the	DET	DT	Definite=Def|PronType=Art	28	det	_	_
+26	1989	1989	NUM	CD	NumForm=Digit|NumType=Card	28	compound	_	_
+27	Tiananmen	Tiananmen	PROPN	NNP	Number=Sing	28	compound	_	_
+28	protests	protest	NOUN	NNS	Number=Plur	17	nmod	_	_
+29	.	.	PUNCT	.	_	3	punct	_	SpaceAfter=No
+
+
+
+# generator = UDPipe 2, https://lindat.mff.cuni.cz/services/udpipe
+# udpipe_model = english-ewt-ud-2.17-251125
+# udpipe_model_licence = CC BY-NC-SA
+# newdoc
+# newpar
+# sent_id = 1
+# text = Students and teachers of physical education relaunched their protest against the appointment of general teachers for physical education work in schools .
+1	Students	student	NOUN	NNS	Number=Plur	7	nsubj	_	_
+2	and	and	CCONJ	CC	_	3	cc	_	_
+3	teachers	teacher	NOUN	NNS	Number=Plur	1	conj	_	_
+4	of	of	ADP	IN	_	6	case	_	_
+5	physical	physical	ADJ	JJ	Degree=Pos	6	amod	_	_
+6	education	education	NOUN	NN	Number=Sing	1	nmod	_	_
+7	relaunched	relaunch	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	_	_
+8	their	they	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	9	nmod:poss	_	_
+9	protest	protest	NOUN	NN	Number=Sing	7	obj	_	_
+10	against	against	ADP	IN	_	12	case	_	_
+11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	_	_
+12	appointment	appointment	NOUN	NN	Number=Sing	9	nmod	_	_
+13	of	of	ADP	IN	_	15	case	_	_
+14	general	general	ADJ	JJ	Degree=Pos	15	amod	_	_
+15	teachers	teacher	NOUN	NNS	Number=Plur	12	nmod	_	_
+16	for	for	ADP	IN	_	19	case	_	_
+17	physical	physical	ADJ	JJ	Degree=Pos	18	amod	_	_
+18	education	education	NOUN	NN	Number=Sing	19	compound	_	_
+19	work	work	NOUN	NN	Number=Sing	15	nmod	_	_
+20	in	in	ADP	IN	_	21	case	_	_
+21	schools	school	NOUN	NNS	Number=Plur	12	nmod	_	_
+22	.	.	PUNCT	.	_	7	punct	_	SpaceAfter=No
