@@ -17,28 +17,28 @@
 #fun xcompA_ccomp_ head ccomp -- AP -> ccomp -> xcomp
 #fun xcompToBeN_ mark cop head -- mark -> cop -> NP -> xcomp
 #fun csubjMark_ mark head
-#fun aclRelclUDSRP_ nsubj:* head
+#fun aclRelclUDSRP_ nsubj head
 #fun punct_ head
 
 #fun addMark mark head
-#fun root_nsubj head nsubj:*                         -- root -> nsubj:* -> UDS ;               -- the cat sleeps
-#fun root_nsubj_obj head nsubj:* obj                 -- root -> nsubj:* -> obj -> UDS ;   -- the cat sees us
-#fun root_nsubj_cop head nsubj:* cop                 -- root -> nsubj:* -> cop -> UDS ; -- the cat is small
-#fun root_nsubj_cop_nmod head nsubj:* cop nmod       -- my hovercraft is full [of eels] (eels is nmod)
-#fun root_nsubj_cop_advmod head nsubj:* cop advmod   -- the party is [here] (here is advmod)
-#fun root_nsubj_cop_aclRelcl head nsubj:* cop acl:relcl
-#fun root_nsubj_aux_aclRelcl_obl head nsubj:* aux acl:relcl obl
+#fun root_nsubj head nsubj                         -- root -> nsubj -> UDS ;               -- the cat sleeps
+#fun root_nsubj_obj head nsubj obj                 -- root -> nsubj -> obj -> UDS ;   -- the cat sees us
+#fun root_nsubj_cop head nsubj cop                 -- root -> nsubj -> cop -> UDS ; -- the cat is small
+#fun root_nsubj_cop_nmod head nsubj cop nmod       -- my hovercraft is full [of eels] (eels is nmod)
+#fun root_nsubj_cop_advmod head nsubj cop advmod   -- the party is [here] (here is advmod)
+#fun root_nsubj_cop_aclRelcl head nsubj cop acl:relcl
+#fun root_nsubj_aux_aclRelcl_obl head nsubj aux acl:relcl obl
 #fun root_nsubjPass_aux_auxPass head nsubj:pass aux aux:pass  -- everyone should be notified
-#fun root_nsubj_aux_obl head nsubj:* aux obl
+#fun root_nsubj_aux_obl head nsubj aux obl
 #fun root_advmod_xcomp head advmod xcomp
 #fun root_xcomp head xcomp
-#fun root_mark_nsubj_aux head mark nsubj:* aux
-#fun root_mark_nsubj_aux_aux head mark nsubj:* aux aux
-#fun root_nsubj_aux head nsubj:* aux
-#fun root_nsubj_aux_aclRelcl head nsubj:* aux acl:relcl
-#fun root_nsubj_aux_aux head nsubj:* aux aux
-#fun root_nsubj_cop_aclRelcl_obl head nsubj:* cop acl:relcl obl
-#fun root_nsubj_cop_obl head nsubj:* cop obl
+#fun root_mark_nsubj_aux head mark nsubj aux
+#fun root_mark_nsubj_aux_aux head mark nsubj aux aux
+#fun root_nsubj_aux head nsubj aux
+#fun root_nsubj_aux_aclRelcl head nsubj aux acl:relcl
+#fun root_nsubj_aux_aux head nsubj aux aux
+#fun root_nsubj_cop_aclRelcl_obl head nsubj cop acl:relcl obl
+#fun root_nsubj_cop_obl head nsubj cop obl
 #fun root_nmod_nmod head nmod nmod
 
 #fun passRelcl_ head nsubj:pass cop                -- root -> nsubj:pass -> cop -> acl:relcl ;
@@ -62,7 +62,7 @@
 #fun UseAdv head
 
 #fun AdvIP head advmod
-#fun FunRP case nsubj:* head
+#fun FunRP case nsubj head
 #fun ExistS dep dep head
 #fun ExistNP head
 #fun ExistNPQS dep dep head
@@ -258,8 +258,8 @@
 #fun root_advmod_advcl head advmod advcl
 #fun root_advmod_advmod_obl head advmod advmod obl
 #fun root_advmod_amod head advmod amod
-#fun root_advmod_nsubj_aux_advmod_obj head advmod nsubj:* aux advmod obj
-#fun root_advmod_nsubj_cop_obl head advmod nsubj:* cop obl
+#fun root_advmod_nsubj_aux_advmod_obj head advmod nsubj aux advmod obj
+#fun root_advmod_nsubj_cop_obl head advmod nsubj cop obl
 #fun root_amod head amod
 #fun root_amod_nmod head amod nmod
 #fun root_appos head appos
@@ -327,15 +327,15 @@
 #fun root_mark_nsubj head mark nsubj
 #fun root_mark_nsubj head mark nsubj:pass
 #fun root_mark_nsubj_obl head mark nsubj:pass obl
-#fun root_mark_nsubj_aux_advmod_obj head mark nsubj:* aux advmod obj
-#fun root_mark_nsubj_cop head mark nsubj:* cop
-#fun root_mark_nsubj_cop_case_det head mark nsubj:* cop case det
-#fun root_mark_nsubj_cop_det_case head mark nsubj:* cop det case
-#fun root_mark_nsubj_cop_det_compound_compound head mark nsubj:* cop det compound compound
-#fun root_mark_nsubj_cop_obl head mark nsubj:* cop obl
-#fun root_mark_nsubj_obj head mark nsubj:* obj
-#fun root_mark_nsubj_obl head mark nsubj:* obl
-#fun root_mark_nsubj_xcomp head mark nsubj:* xcomp
+#fun root_mark_nsubj_aux_advmod_obj head mark nsubj aux advmod obj
+#fun root_mark_nsubj_cop head mark nsubj cop
+#fun root_mark_nsubj_cop_case_det head mark nsubj cop case det
+#fun root_mark_nsubj_cop_det_case head mark nsubj cop det case
+#fun root_mark_nsubj_cop_det_compound_compound head mark nsubj cop det compound compound
+#fun root_mark_nsubj_cop_obl head mark nsubj cop obl
+#fun root_mark_nsubj_obj head mark nsubj obj
+#fun root_mark_nsubj_obl head mark nsubj obl
+#fun root_mark_nsubj_xcomp head mark nsubj xcomp
 #fun root_mark_nummod head mark nummod
 #fun root_nmod head nmod
 #fun root_nmodPoss_advmod head nmod:poss advmod
@@ -354,32 +354,32 @@
 #fun root_nsubjPass_aux_auxPass_obl_obl_advcl head nsubj:pass aux aux:pass obl obl advcl
 #fun root_nsubjPass_aux_auxPass_obl_obl_advmod head nsubj:pass aux aux:pass obl obl advmod
 -}
-#fun root_nsubj_advmod head nsubj:* advmod
-#fun root_nsubj_advmod_case_det head nsubj:* advmod case det
-#fun root_nsubj_advmod_obj head nsubj:* advmod obj
-#fun root_nsubj_aux_advmod head nsubj:* aux advmod
-#fun root_nsubj_aux_advmod_obj_advcl head nsubj:* aux advmod obj advcl
-#fun root_nsubj_aux_obj head nsubj:* aux obj
-#fun root_nsubj_aux_obj_obl head nsubj:* aux obj obl
-#fun root_nsubj_aux_obj_obl_advmod_advcl head nsubj:* aux obj obl advmod advcl
-#fun root_nsubj_aux_obj_obl_obl head nsubj:* aux obj obl obl
-#fun root_nsubj_ccomp head nsubj:* ccomp
-#fun root_nsubj_cop head nsubj:* cop
-#fun root_nsubj_cop_aclRelcl head nsubj:* cop acl:relcl
-#fun root_nsubj_cop_advcl head nsubj:* cop advcl
-#fun root_nsubj_cop_case_nmod_acl head nsubj:* cop case nmod acl
-#fun root_nsubj_cop_det_amod_advcl head nsubj:* cop det amod advcl
-#fun root_nsubj_cop_det_amod_compound head nsubj:* cop det amod compound
-#fun root_nsubj_cop_det_compound head nsubj:* cop det compound
-#fun root_nsubj_cop_det_nmod head nsubj:* cop det nmod
-#fun root_nsubj_cop_nmodPoss head nsubj:* cop nmod:poss
-#fun root_nsubj_det head nsubj:* det
-#fun root_nsubj_det_nmod_nmod head nsubj:* det nmod nmod
-#fun root_nsubj_obj head nsubj:* obj
-#fun root_nsubj_obj_obl head nsubj:* obj obl
-#fun root_nsubj_obj_xcomp head nsubj:* obj xcomp
-#fun root_nsubj_obl head nsubj:* obl
-#fun root_nsubj_xcomp head nsubj:* xcomp
+#fun root_nsubj_advmod head nsubj advmod
+#fun root_nsubj_advmod_case_det head nsubj advmod case det
+#fun root_nsubj_advmod_obj head nsubj advmod obj
+#fun root_nsubj_aux_advmod head nsubj aux advmod
+#fun root_nsubj_aux_advmod_obj_advcl head nsubj aux advmod obj advcl
+#fun root_nsubj_aux_obj head nsubj aux obj
+#fun root_nsubj_aux_obj_obl head nsubj aux obj obl
+#fun root_nsubj_aux_obj_obl_advmod_advcl head nsubj aux obj obl advmod advcl
+#fun root_nsubj_aux_obj_obl_obl head nsubj aux obj obl obl
+#fun root_nsubj_ccomp head nsubj ccomp
+#fun root_nsubj_cop head nsubj cop
+#fun root_nsubj_cop_aclRelcl head nsubj cop acl:relcl
+#fun root_nsubj_cop_advcl head nsubj cop advcl
+#fun root_nsubj_cop_case_nmod_acl head nsubj cop case nmod acl
+#fun root_nsubj_cop_det_amod_advcl head nsubj cop det amod advcl
+#fun root_nsubj_cop_det_amod_compound head nsubj cop det amod compound
+#fun root_nsubj_cop_det_compound head nsubj cop det compound
+#fun root_nsubj_cop_det_nmod head nsubj cop det nmod
+#fun root_nsubj_cop_nmodPoss head nsubj cop nmod:poss
+#fun root_nsubj_det head nsubj det
+#fun root_nsubj_det_nmod_nmod head nsubj det nmod nmod
+#fun root_nsubj_obj head nsubj obj
+#fun root_nsubj_obj_obl head nsubj obj obl
+#fun root_nsubj_obj_xcomp head nsubj obj xcomp
+#fun root_nsubj_obl head nsubj obl
+#fun root_nsubj_xcomp head nsubj xcomp
 #fun root_nummod head nummod
 #fun root_nummod_appos head nummod appos
 #fun root_nummod_auxPass_cc_aux_auxPass_obl_obl head nummod aux:pass cc aux aux:pass obl obl
@@ -411,19 +411,19 @@
 #fun root_obj_xcomp head obj xcomp
 #fun root_advcl_det_compound_amod_advcl head advcl  det  compound  amod  advcl
 #fun root_advcl_nsubjPass_auxPass head advcl  nsubj:pass  aux:pass
-#fun root_advcl_nsubj_aux_advcl head advcl  nsubj:*  aux  advcl
-#fun root_advcl_nsubj_aux_advmod_obj head advcl  nsubj:*  aux  advmod  obj
-#fun root_advcl_nsubj_aux_ccomp head advcl  nsubj:*  aux  ccomp
-#fun root_advcl_nsubj_aux_obl_obj head advcl  nsubj:*  aux  obl  obj
-#fun root_advcl_nsubj_cop head advcl  nsubj:*  cop
-#fun root_advcl_nsubj_cop_case_amod_nmod head advcl  nsubj:*  cop  case  amod  nmod
-#fun root_advcl_nsubj_cop_det_amod head advcl  nsubj:*  cop  det  amod
-#fun root_advcl_nsubj_xcomp head advcl  nsubj:*  xcomp
-#fun root_mark_nsubj_nsubj_xcomp head mark  nsubj:*  nsubj:*  xcomp
-#fun root_nsubj_cop_det_aclRelcl head nsubj:*  cop  det  acl:relcl
-#fun root_nsubj_cop_obl_parataxis head nsubj:*  cop  obl  parataxis
-#fun root_nsubj_obj_advcl head nsubj:*  obj  advcl
-#fun root_nsubj_aux_xcomp head nsubj:* aux xcomp
+#fun root_advcl_nsubj_aux_advcl head advcl  nsubj  aux  advcl
+#fun root_advcl_nsubj_aux_advmod_obj head advcl  nsubj  aux  advmod  obj
+#fun root_advcl_nsubj_aux_ccomp head advcl  nsubj  aux  ccomp
+#fun root_advcl_nsubj_aux_obl_obj head advcl  nsubj  aux  obl  obj
+#fun root_advcl_nsubj_cop head advcl  nsubj  cop
+#fun root_advcl_nsubj_cop_case_amod_nmod head advcl  nsubj  cop  case  amod  nmod
+#fun root_advcl_nsubj_cop_det_amod head advcl  nsubj  cop  det  amod
+#fun root_advcl_nsubj_xcomp head advcl  nsubj  xcomp
+#fun root_mark_nsubj_nsubj_xcomp head mark  nsubj  nsubj  xcomp
+#fun root_nsubj_cop_det_aclRelcl head nsubj  cop  det  acl:relcl
+#fun root_nsubj_cop_obl_parataxis head nsubj  cop  obl  parataxis
+#fun root_nsubj_obj_advcl head nsubj  obj  advcl
+#fun root_nsubj_aux_xcomp head nsubj aux xcomp
 #fun advclMarkUDS_ mark head
 #fun ccompMarkUDS_ mark head
 
@@ -434,9 +434,9 @@
 #fun root_nsubjPass_aux_auxPass_advmod head nsubj:pass aux aux:pass advmod
 #fun root_nsubjPass_aux_auxPass_obl head nsubj:pass aux aux:pass obl
 #fun root_nsubjPass_aux_auxPass_xcomp head nsubj:pass aux aux:pass xcomp
-#fun root_nsubj_aux_cop_nmod head nsubj:* aux cop nmod
-#fun root_nsubj_nsubj_aux_advmod_obj head nsubj:* nsubj aux advmod obj
-#fun root_advcl_nsubj_cop_nsubj head advcl nsubj:* cop nsubj
+#fun root_nsubj_aux_cop_nmod head nsubj aux cop nmod
+#fun root_nsubj_nsubj_aux_advmod_obj head nsubj nsubj aux advmod obj
+#fun root_advcl_nsubj_cop_nsubj head advcl nsubj cop nsubj
 
 #fun MkA2 head case
 #fun Adv_Adv__but_in_any_case_Adv head TODO
