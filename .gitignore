@@ -1,2 +1,7 @@
 *.gfo
 *.pgf
+*.dot
+*.eps
+*.log
+*.aux
+*.tex
