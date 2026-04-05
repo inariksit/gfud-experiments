@@ -47,7 +47,6 @@
 -- Labels for the core RGL functions, copied from the original gf-rgl/Lang.labels and gf-ud/grammars/Parse.labels
 
 #fun UsePron head
-#fun DetCN _ PossPron > nmod:poss head   -- my hovercraft
 #fun DetCN det head -- Det -> CN -> NP
 
 #fun DetQuant 	head nummod          -- Quant -> Num -> Det
