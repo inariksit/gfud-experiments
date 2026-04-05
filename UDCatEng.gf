@@ -69,6 +69,7 @@ concrete UDCatEng of UDCat = BareRGEng **
     -- However, we don't ignore aux, because aux has lot of interesting information.
     be_cop = ss "be" ;
     is_cop = ss "is" ;
+    '\'s_Gen' = ss ("'s"|"’s"|"s") ;
     '-_Punct' = ss ("-"|"–"|"—") ;
     not_Neg = ss "not" ;
 
@@ -87,7 +88,7 @@ concrete UDCatEng of UDCat = BareRGEng **
        in dummyRS ** {s = \\_ => linUDS uds};
        -}
     aclRelclUDSRP_ rp uds = aclRelclUDS_ (uds ** {subj = rp2np rp}) ;
-    aclRelclUDS_ uds = lin Adv {s = embedInCommas (linUDS uds)} ;
+    aclRelclUDS_ uds = lin Adv {s = embedInCommas (linUDS' PastPart emptyNP uds)} ;
     cc_ = id Conj ;
     obl_ = id S.Adv ;
     advmod_ a = {adv = a ; isNot = False} ;

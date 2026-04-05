@@ -142,7 +142,7 @@ concrete BareRGEng of BareRG =
     -- : VP -> NP -> AP ; -- affected by breach, no auxPass (Extend.PastPartAP takes a VPSlash)
     PastPartAgentAP vp = E.PastPartAgentAP (slashV vp) ;
 
-    -- : Numeral -> N -> AP
+    -- : Card -> N -> AP
     AttributeNum num n = 
         let numS : Str = (mkUtt (mkNP (mkDet num))).s ;
             nounS : Str = (mkUtt (mkNP n)).s ;

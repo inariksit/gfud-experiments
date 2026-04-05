@@ -78,7 +78,7 @@
 #auxfun PositA_ a : A -> AP = PositA a ; head[Degree=Pos]
 #auxfun UseComparA_ a : A -> AP = UseComparA a ; head[Degree=Cmp]
 #auxfun SuperlA_ a : A -> AP = AdjOrd (OrdSuperl a) ; head[Degree=Sup]
-#disable UseComparA OrdSuperl AdjOrd
+#disable UseComparA OrdSuperl AdjOrd PositA
 
 #auxfun ExtAdvS_ adv comma s : Adv -> Conj -> S -> S = ExtAdvS adv s ; advmod punct[LEMMA=\,] head
 -- s is the head (i ate cake)
@@ -494,9 +494,17 @@ ExtAdvS sent adv = {s = sent.s ++ "," ++ adv.s} ;
 
 -- type PrefixVP = ListVP -> ListVP
 
-#auxfun VPListHead_ eats : VP -> PrefixVP = ConsVP eats ; head
+#disable ConsVP
+-- TODO: uncomment once figured out why it breaks things
+-- test with actual conjunctions
+-- #auxfun VPListHead_ eats : VP -> PrefixVP = ConsVP eats ; head 
 
 #auxfun VPAddComma_ eats shoots : PrefixVP -> VPComma -> PrefixVP = Compose_ eats (ConsVP shoots) ; head conj
 
 #auxfun VPCompleteList_ eatsShoots leaves and_sleeps : PrefixVP -> VPComma -> Pair_Conj_VP -> VP = UsePair_ (VPCompleteList_helper_ eatsShoots leaves) and_sleeps ; head conj conj
 #auxfun VPCompleteList_helper_ eatsShoots leaves and sleeps : PrefixVP -> VPComma -> Conj -> VP -> VP = ConjVP and (eatsShoots (BaseVP leaves sleeps)) ; head dummy dummy dummy
+
+------
+-- misc things to check later
+-- disable unary functions and use them only via macros, otherwise they are applied too liberally
+#disable EmbedVP

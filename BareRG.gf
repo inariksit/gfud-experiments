@@ -107,7 +107,7 @@ abstract BareRG =
     -- PredetPrep : Predet -> Prep -> Prep ;               -- more than
     -- PredetPrepCard : Predet -> Prep -> Card -> Prep ;   -- more than 500/enough
 
-    AttributeNum : Numeral -> N -> AP ; -- [79-day]:AP [occupation]:CN
+    AttributeNum : Card -> N -> AP ; -- [79-day]:AP [occupation]:CN
 
     ParentheticalAP : AP -> AP ;
     -- JustWordsWordNet has no V2 etc
