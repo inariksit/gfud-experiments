@@ -121,6 +121,7 @@ abstract UDCat = BareRG ** {
         xcompToBeN_ : mark -> cop -> NP -> xcomp ; -- considered [to be a building]
         xcompA_ : AP -> xcomp ; -- become [aware]:
         xcompA_ccomp_ : AP -> ccomp -> xcomp ; -- become [aware [that a data breach occurred]]
+        xcompVP_ : VP -> xcomp ; -- help [launch an occupation]
 
         ccomp_ : UDS -> ccomp ; -- just missing a complementiser, like "that"
         ccompMarkUDS_ : mark -> UDS -> ccomp ;

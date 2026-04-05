@@ -3,6 +3,7 @@
 #fun obj_ head                -- NP -> obj
 #fun iobj_ head               -- NP -> iobj
 #fun xcompA_ head             -- AP -> xcomp
+#fun xcompVP_ head            -- VP -> xcomp
 #fun rootV_ head              -- VP -> root
 #fun rootA_ head              -- AP -> root
 #fun rootN_ head              -- NP -> root

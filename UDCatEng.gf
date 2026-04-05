@@ -117,6 +117,7 @@ concrete UDCatEng of UDCat = BareRGEng **
     xcompN_ np = lin Adv (mkUtt np) ;
     xcompToBeN_ to be np = lin Adv (cc3 to be (mkUtt np)) ;
     xcompA_ccomp_ ap cc = xcompA_ (AdvAP ap <cc : S.Adv>) ; -- need to treat cc as Adv, otherwise mkAP would put an extra "that"
+    xcompVP_ vp = lin Adv (mkUtt vp) ; -- TODO
     aclUDS_,
     advclUDS_ = \uds -> lin Adv {s = linUDS uds} ;
     aclUDSpastpart_ uds       = lin Adv {s =        linUDS' PastPart emptyNP uds        } ;
