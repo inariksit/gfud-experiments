@@ -55,7 +55,8 @@
 #fun PossPron head
 #fun UseN head
 #fun AdjCN amod head
-#fun AttributeNum nummod head -- Numeral -> N -> AP
+#fun AttributeNum nummod head -- Card -> N -> AP
+#fun AttributeNumPN compound compound head -- Card -> PN -> N -> N
 #fun UseV head
 
 #fun UseAdv head

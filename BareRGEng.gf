@@ -144,10 +144,15 @@ concrete BareRGEng of BareRG =
 
     -- : Card -> N -> AP
     AttributeNum num n = 
-        let numS : Str = (mkUtt (mkNP (mkDet num))).s ;
-            nounS : Str = (mkUtt (mkNP n)).s ;
-         in mkAP (P.invarA (numS ++ "-" ++ nounS)) ;
+      let numS : Str = (mkUtt (mkNP (mkDet num))).s ;
+          nounS : Str = (mkUtt (mkNP n)).s ;
+        in mkAP (P.invarA (numS ++ "-" ++ nounS)) ;
 
+    -- : Card -> PN -> N -> N ;
+    AttributeNumPN num pn n =
+      let pnN : N = pn ** {s = \\_ => pn.s} ;
+          ap : AP = AttributeNum num <pnN : N> ;
+       in lin N (mkCN ap n) ;
 
     -- : AP -> AP ;
     ParentheticalAP ap =  ap ** {

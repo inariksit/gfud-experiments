@@ -108,6 +108,7 @@ abstract BareRG =
     -- PredetPrepCard : Predet -> Prep -> Card -> Prep ;   -- more than 500/enough
 
     AttributeNum : Card -> N -> AP ; -- [79-day]:AP [occupation]:CN
+    AttributeNumPN : Card -> PN -> N -> N ; -- 1989 Tiananmen protest
 
     ParentheticalAP : AP -> AP ;
     -- JustWordsWordNet has no V2 etc
