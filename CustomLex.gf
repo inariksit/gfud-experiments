@@ -4,5 +4,6 @@ abstract CustomLex = Cat ** {
     China_PN : PN ; 
     Communist_A : A ;
     relaunch_V : V ;
-    
+    '79_Card', '1989_Card' : Card ;    
+
 }
