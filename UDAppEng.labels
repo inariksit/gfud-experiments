@@ -58,6 +58,7 @@
 #disable anyPl_Det anySg_Det
 
 #auxfun DetDAP_anySg_ det ap : Det -> AP -> DAP = AdjDAP (DetDAP anySg_Det) ap ; det[LEMMA=any] head
+#disable DetDAP
 
 #auxfun DetCN_someSg det cn : Det -> CN -> NP = DetCN someSg_Det cn ; det[LEMMA=some] head[Number=Sing]
 #auxfun DetCN_somePl det cn : Det -> CN -> NP = DetCN somePl_Det cn ; det[LEMMA=some] head[Number=Plur]
