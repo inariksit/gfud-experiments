@@ -417,7 +417,8 @@ ExtAdvS sent adv = {s = sent.s ++ "," ++ adv.s} ;
 -- cat, horse, capybara and dog
 #auxfun CommaNP_ np comma : NP -> Conj -> NPComma = np ; head punct[LEMMA=\,]
 
-#auxfun AndDogPair_ and dog : Conj -> NP -> Pair_Conj_NP = MkPair_ and dog ; cc head
+-- #auxfun AndDogPair_ and dog : Conj -> NP -> Pair_Conj_NP = MkPair_ and dog ; cc head
+-- TODO uncomment this, find a better way to prefer conjunction between N when available
 
 #auxfun NP2_ cat andDog : NP -> Pair_Conj_NP -> NP = UsePair_ (NP2_helper_ cat) andDog ; head conj
 #auxfun NP2_helper_ cat and dog :  NP -> Conj -> NP -> NP = ConjNP and (BaseNP cat dog) ; head dummy nonexistent
@@ -467,7 +468,8 @@ ExtAdvS sent adv = {s = sent.s ++ "," ++ adv.s} ;
 -- ** CN **
 #auxfun CommaCN_ cn comma : CN -> Conj -> CNComma = cn ; head punct[LEMMA=\,]
 
-#auxfun AndCNPair_ and dog : Conj -> CN -> Pair_Conj_CN = MkPair_ and dog ; cc head
+-- #auxfun AndCNPair_ and dog : Conj -> CN -> Pair_Conj_CN = MkPair_ and dog ; cc head
+-- TODO uncomment this, find a better way to prefer conjunction between N when available
 
 #auxfun CN2_ cat andDog : CN -> Pair_Conj_CN -> CN = UsePair_ (CN2_helper_ cat) andDog ; head conj
 #auxfun CN2_helper_ cat and dog :  CN -> Conj -> CN -> CN = ConjCN and (BaseCN cat dog) ; head dummy nonexistent
