@@ -150,8 +150,9 @@ concrete BareRGEng of BareRG =
 
     -- : Card -> PN -> N -> N ;
     AttributeNumPN num pn n =
-      let pnN : N = pn ** {s = \\_ => pn.s} ;
-          ap : AP = AttributeNum num <pnN : N> ;
+      let numS : Str = (mkUtt (mkNP (mkDet num))).s ;
+          pnS : Str = (mkUtt (mkNP pn)).s ;
+          ap : AP = mkAP (P.invarA (numS ++ pnS)) ;
        in lin N (mkCN ap n) ;
 
     -- : AP -> AP ;
